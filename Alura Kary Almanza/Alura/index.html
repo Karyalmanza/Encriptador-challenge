@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metaetiquetas esenciales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Mágico</title>
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Enlace a una hoja de estilos de iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal para todo el contenido -->
+    <div class="container">
+        <h1>Encriptador Challenge</h1>
+
+        <!-- Sección de entrada de texto para encriptar -->
+        <div class="input-section">
+            <label for="inputText">Escribe tu texto aquí:</label> <!-- Añadido un label para mejor accesibilidad -->
+            <div class="input-group"> <!-- Añadido un contenedor para agrupar el textarea y el botón -->
+                <textarea id="inputText" rows="3" placeholder="Escribe tu texto aquí..."></textarea>
+                <button onclick="encryptText()" class="btn btn-encrypt"><i class="fas fa-lock"></i> Encriptar</button>
+            </div>
+        </div>
+
+        <!-- Sección para desencriptar el texto -->
+        <div class="output-section">
+            <h2><i class="fas fa-lock-open"></i> Desencriptador</h2>
+            <div class="input-group"> <!-- Añadido un contenedor para agrupar el textarea y el botón -->
+                <textarea id="decryptInput" rows="3" placeholder="Escribe el texto encriptado aquí..."></textarea>
+                <button onclick="decryptText()" class="btn btn-decrypt"><i class="fas fa-unlock"></i> Desencriptar</button>
+            </div>
+            <div class="result" id="decryptedText"></div>
+        </div>
+
+        <!-- Sección para mostrar la lista de mensajes encriptados -->
+        <div class="storage-section">
+            <h2>🔒 Mensajes Encriptados</h2>
+            <ul id="encryptedMessagesList"></ul>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+
+</body>
+
+<footer>
+    <p>&copy; Creado por Karina Almanza, 2024</p>
+</footer>
+
+</html>

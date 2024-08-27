@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #ff60aa; 
+    color: #e2e9e2; 
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Anchura máxima del contenedor */
+    margin: 90px auto; /* Margen superior e inferior, centra horizontalmente */
+    background-color: #bd3995; 
+    padding: 50px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(255, 243, 68, 0.788); 
+}
+
+h1 {
+    font-size: 2em; /* Tamaño grande para el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: hsl(286, 100%, 84%); 
+}
+
+.input-section {
+    margin-bottom: 30px; /* Espacio debajo de la sección de entrada */
+}
+
+textarea {
+    width: 95%; /* Ancho completo del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #b0bec5;
+    border-radius: 5px; 
+    resize: none; 
+    font-size: 1em; /* Tamaño de la fuente */
+    margin-bottom: 10px; /* Espacio debajo del textarea */
+}
+
+.btn {
+    display: inline-block; /* Bloque en línea */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño de la fuente */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    color: #fcb1df;
+    background-color: #dd48eb; 
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.btn-encrypt {
+    background-color: #1976d2; 
+}
+
+.btn-decrypt {
+    background-color: #f542b0; 
+}
+
+.btn:hover {
+    background-color: #dc8ff3; 
+}
+
+/* Estilos para la sección de salida de texto */
+.output-section h2 {
+    font-size: 1.5em; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espacio debajo del subtítulo */
+    color: #29e4eb; 
+}
+
+.result {
+    padding: 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espacio superior */
+    border-radius: 5px; 
+    background-color: #ef45ff; 
+    font-size: 1.2em; /* Tamaño de la fuente */
+}
+
+/* Clase de advertencia para mensajes de error o alerta */
+.warning {
+    color: #d32f2f; 
+}
+
+.storage-section {
+    margin-top: 30px; /* Espacio superior */
+}
+
+ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Sin espaciado interno */
+}
+
+li {
+    background-color: #ec1cf354; 
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior entre elementos */
+    border-radius: 5px; 
+    text-align: left; /* Alineación del texto a la izquierda */
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre el texto y el botón de copiar */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+/* Estilos para el botón de copiar en la lista */
+.copy-btn {
+    background-color: #b62ada; /* Fondo azul oscuro */
+    padding: 5px 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #a82c8d; /* Texto blanco */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    margin-left: 10px; /* Espacio a la izquierda del botón */
+}
+
+/* Ajuste en el cuadro de instrucciones para pantallas pequeñas */
+.instruction p, .instruction ol, .instruction ul {
+    overflow-wrap: break-word; /* Rompe las palabras largas para evitar desbordamiento */
+    word-wrap: break-word; /* Para compatibilidad con navegadores antiguos */
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto; /* Reduce el margen para móviles */
+        padding: 20px; /* Reduce padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título */
+    }
+
+    .output-section h2, .result {
+        font-size: 0.5em; /* Reduce el tamaño del texto en la salida */
+    }
+
+    .btn {
+        padding: 10px; /* Ajusta el padding de los botones */
+        font-size: 0.9em; /* Reduce el tamaño del texto de los botones */
+    }
+
+    .instruction-container {
+        padding: 10px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .instruction {
+        margin-bottom: 20px; /* Espacio inferior entre secciones */
+    }
+
+    .instruction h2 {
+        font-size: 1.2em; /* Reduce el tamaño del subtítulo */
+    }
+
+    .instruction p, .instruction ol, .instruction ul {
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+        line-height: 1.4em; /* Ajusta la altura de línea para mejorar la legibilidad */
+        padding-left: 10px; /* Añade padding a la izquierda para evitar que el texto toque el borde */
+        padding-right: 10px; /* Añade padding a la derecha para evitar que el texto toque el borde */
+    }
+
+    .instruction ul {
+        padding-left: 20px; /* Asegura que las viñetas estén alineadas correctamente */
+    }
+}
+
+/* Estilo para tablets (pantallas entre 601px y 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        margin: 50px auto; /* Ajusta el margen para tablets */
+        padding: 30px; /* Ajusta el padding para tablets */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Tamaño intermedio para el título */
+    }
+
+    .output-section h2, .result {
+        font-size: 1.1em; /* Ajusta el tamaño del texto en la salida */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Ajusta el padding de los botones */
+        font-size: 1em; /* Tamaño intermedio del texto de los botones */
+    }
+}
+
+/* Estilo para pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 800px; /* Permite que el contenedor se haga más grande en pantallas grandes */
+    }
+
+    h1 {
+        font-size: 2em; /* Tamaño más grande para el título */
+    }
+
+    .output-section h2, .result {
+        font-size: 1.2em; /* Tamaño más grande del texto en la salida */
+    }
+
+    .btn {
+        padding: 15px 30px; /* Aumenta el padding de los botones */
+        font-size: 1.1em; /* Tamaño más grande del texto de los botones */
+    }
+}
+
+/* Pie de página con el copyright */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #1565c0;
+    color: #c796f5;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 0 0 10px 10px;
+}
